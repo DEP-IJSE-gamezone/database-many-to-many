@@ -22,11 +22,11 @@ public class Many2ManyDemo3 {
                 tx.begin();
                 Course english = em.find(Course.class, "E001");
                 Student dilini = em.find(Student.class, "S001");
-                StudentCoursePK studentCourceDetail = new StudentCoursePK(dilini.getId(), english.getCode());
-                StudentCourse studentCourse = new StudentCourse(studentCourceDetail, "Mr.Saman", Date.valueOf(LocalDate.now()));
-
-
-                em.persist(studentCourse);
+//                StudentCoursePK studentCourceDetail = new StudentCoursePK(dilini.getId(), english.getCode());
+//                StudentCourse studentCourse = new StudentCourse(studentCourceDetail, "Mr.Saman", Date.valueOf(LocalDate.now()));
+//
+//
+//                em.persist(studentCourse);
                 tx.commit();
             } catch (Throwable e) {
                 e.printStackTrace();
